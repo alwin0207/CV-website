@@ -20,7 +20,7 @@ const app = express();
 
 // ... mongoose ...
 const dbLocation =
-  process.env.DATABASELOCATION || "mongodb://localhost/codefarm_game";
+  process.env.DATABASELOCATION || "mongodb://localhost/onlineCV";
 mongoose
   .connect(dbLocation, {
     useNewUrlParser: true,
