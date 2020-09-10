@@ -1,0 +1,122 @@
+.profile_section{ /* Needs a container inside*/
+    display: grid;
+    align-content: stretch;
+    justify-content: stretch;
+}
+
+.profile_section.intro{
+    grid-template-columns: 5% 0.1fr 36% 2fr 5% 0.1fr 20% 1fr 5% 0.1fr;
+    grid-template-rows: 2.8vw 0fr 28vw 0fr 1.4vw 0fr 8.4vw 0fr 2.8vw 0fr;
+    background-color: hsl(0, 0%, 10%);
+    color: white;
+}
+
+.profile_section.explanation{
+    grid-template-columns: 5% 0fr 34% 3.5fr 5% 0fr 43% 5fr 5% 0fr;
+    grid-template-rows: 4vw 0fr 45vw 0fr 4vw 0fr;
+    background-color: hsl(0, 0%, 84%);
+}
+
+.intro .textspace{
+    grid-column: 3/ span 2;
+    grid-row: 3/ span 2;
+}
+
+.intro .profile_picture_space{
+    grid-column: 7/span 2;
+    grid-row: 3/ span 6;
+    background-color: blue;
+}
+
+.intro .social_media_links{
+    grid-column: 3/ span 2;
+    grid-row: 7/span 2;
+}
+
+
+
+.explanation .textspace{
+    grid-column: 7/ span 2;
+    grid-row: 3/ span 2;
+}
+
+.explanation .quotespace{
+    grid-column: 3/ span 2;
+    grid-row: 3/ span 2;
+    background-color: #151515;
+    color: white;
+    border-radius: 20px;
+}
+
+.textspace h1{
+    font-size: 6vw;
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: 4vw;
+    word-spacing: 1rem;
+}
+
+.textspace p{
+    font-size: 2.1vw;
+    margin: 0px;
+    line-height: 1.3em;
+    word-spacing: 0.9rem;
+    letter-spacing: 0.2rem;
+}
+
+.social_media_links{
+    display: flex;
+    align-items: center;
+}
+
+.social_media_links a{
+    display: block;
+    height: 70px;
+    width: 70px;
+    background-color: rgb(19, 136, 19);
+    text-decoration: none;
+    margin-left: 25px;
+    border-radius: 50%;
+    
+}
+
+.quotespace{
+    display: grid;
+    grid-template-columns: 50px 1fr 20px 0fr 1px 0fr fit-content(80%) 0fr 1px 0fr 20px 0fr 50px 1fr;
+    grid-template-rows: 30px 1fr 20px 0fr 1px 0fr min-content 0fr 1px 0fr 20px 0fr 110px 0fr 20px 0fr 50px 1fr;
+    align-items: stretch;
+    justify-items: stretch;
+    font-size: 2.3vw;
+    line-height: 1.1em;
+    word-spacing: 0.3rem;
+}
+
+.quote_open{
+    grid-column: 3/ span 2 ;
+    grid-row: 3/ span 2 ;
+    font-size: 3vw;
+    font-weight: 900;
+}
+
+.quote_close{
+    display: inline;
+    grid-column: 11/ span 2;
+    grid-row: 11/ span 2;
+    font-size: 3vw;
+    font-weight: 900;
+    line-height: 1em;
+    margin: 0px;
+    
+}
+
+.quote_text{
+    grid-column: 7/span 1;
+    grid-row: 7/span 1;
+    margin: 0px;
+}
+
+.quote_author{
+    grid-column: 7/ span 2;
+    grid-row: 15/ span 2;
+}

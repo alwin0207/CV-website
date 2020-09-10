@@ -19,7 +19,7 @@ const router = express.Router();
 //================================================================================
 
 router.get("/", function (req, res) {
-    res.render("basic_game_frame.ejs");
+    res.render("main_page.ejs");
   });
 
   router.get("/test", function (req, res) {

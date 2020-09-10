@@ -72,5 +72,5 @@ app.use(indexRoutes);
 
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
-  console.log("Corona Check server is running");
+  console.log("Online CV server is running");
 });
