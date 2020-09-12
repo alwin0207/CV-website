@@ -28,6 +28,7 @@
     background-color: blue;
 }
 
+
 .intro .social_media_links{
     grid-column: 3/ span 2;
     grid-row: 7/span 2;
@@ -72,11 +73,11 @@
 
 .social_media_links a{
     display: block;
-    height: 70px;
-    width: 70px;
+    height: 5vw;
+    width: 5vw;
     background-color: rgb(19, 136, 19);
     text-decoration: none;
-    margin-left: 25px;
+    margin-left: 1.5vw;
     border-radius: 50%;
     
 }
@@ -120,3 +121,10 @@
     grid-column: 7/ span 2;
     grid-row: 15/ span 2;
 }
+
+.profile_picture_space img{
+    height: 100%;
+    width: 100%;
+}
+
+
