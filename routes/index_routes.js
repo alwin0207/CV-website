@@ -6,6 +6,8 @@ const express = require("express"),
   bodyParser = require("body-parser"),
   passport = require("passport"),
   User = require("../models/user.js"),
+  Schooling = require("../models/schooling.js"),
+  WorkExp = require("../models/work_exp.js"),
   authentication = require("../controllers/authentication.js");
 
 //================================================================================
@@ -53,8 +55,55 @@ router.get("/", function (req, res) {
   });
 
   router.get("/test", function (req, res) {
-    res.render("timeline.ejs", {timeline: myTimeline});
+    var workExp=[];
+    var schooling=[];
+    WorkExp.find(function (err, foundExp) {
+      if (err) {return console.error(err);}
+      else{
+        workExp=foundExp;
+        Schooling.find(function (err, foundSchooling) {
+          if (err) {return console.error(err);}
+          else{
+            schooling=foundSchooling;
+            console.log(workExp);
+            console.log(schooling);
+            res.render("timeline.ejs", {timeline: {workExp: workExp, schooling:schooling}});
+          }
+        });
+      }
+    });
   });
+
+  router.post("/test", function (req, res) {
+    if(req.body.choice === "schooling"){
+      var newSchooling = new Schooling({
+        title: req.body.title,
+        location: req.body.location,
+        description: req.body.description,
+        timepoint: req.body.timepoint
+      });
+      newSchooling.save(function (err, schoolingSaved) {
+        if (err) return console.error(err);
+        console.log(schoolingSaved);
+        res.redirect("/test");
+      });
+    }
+    if(req.body.choice === "work"){
+      var newWorkExp = new WorkExp({
+        title: req.body.title,
+        location: req.body.location,
+        description: req.body.description,
+        timepoint: req.body.timepoint
+      });
+      newWorkExp.save(function (err, workExpSaved) {
+        if (err) return console.error(err);
+        console.log(workExpSaved);
+        res.redirect("/test");
+      });
+    }
+    
+  });
+
   
   //================================================================================
   // Under construction route
