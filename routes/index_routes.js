@@ -17,13 +17,43 @@ const router = express.Router();
 //================================================================================
 // Index Routes
 //================================================================================
+var myTimeline = {
+  workExp: [
+    {
+      title: "dit is een test (nr 1)" ,
+      location: "groningen" ,
+      description: "blak kslkdj kdeiek ki iki ben alwin en dit is een test" ,
+      timePoint: "Ba"
+    },
+    {
+      title: "dit is een test (nr 2)" ,
+      location: "groningen" ,
+      description: "blak kslkdj kdeiek ki iki ben alwin en dit is een test" ,
+      timePoint: "Cb"
+    }
+  ],
+  schooling:[
+    {
+      title: "dit is een test (nr 1 schooling)" ,
+      location: "groningen" ,
+      description: "blak kslkdj kdeiek ki iki ben alwin en dit is een test" ,
+      timePoint: "Dc"
+    },
+    {
+      title: "dit is een test (nr 2 schooling)" ,
+      location: "groningen" ,
+      description: "blak kslkdj kdeiek ki iki ben alwin en dit is een test" ,
+      timePoint: "Ed"
+    }
+  ]
+};
 
 router.get("/", function (req, res) {
     res.render("main_page.ejs");
   });
 
   router.get("/test", function (req, res) {
-    res.render("gameprototype.ejs");
+    res.render("timeline.ejs", {timeline: myTimeline});
   });
   
   //================================================================================

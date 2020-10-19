@@ -1,0 +1,19 @@
+<%- include("partials/header")%>
+<div class="timeline_topspace">
+    <h1>Werkervaring</h1>
+</div>
+<div class="timeline_section"></div>
+<div class="timeline_section work_experience">
+    <% for(i=0; i<timeline.workExp.length; i++){%>
+        <%- include("partials/timelineblock", {timeblockInput: timeline.workExp[i]}) %>
+    <%}%>
+</div>
+<div class="timeline_section skills"></div>
+<div class="title_space_schooling">
+    <h1>Opleiding</h1>
+</div>
+<div class="timeline_section schooling">
+    <% for(i=0; i<timeline.schooling.length; i++){%>
+        <%- include("partials/timelineblock", {timeblockInput: timeline.schooling[i]}) %>
+    <%}%>
+</div>

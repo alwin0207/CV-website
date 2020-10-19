@@ -7,7 +7,7 @@ const UserSchema = new mongoose.Schema({
   isExpert: {
     type: Boolean,
     default: true,
-  },
+  }//,
   //    projects: [{
   //     type: mongoose.Schema.Types.ObjectId,
   //     ref: "ScrProject"
