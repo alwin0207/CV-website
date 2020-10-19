@@ -5,4 +5,4 @@ const SchoolingSchema = new mongoose.Schema({
     description: String,
     timepoint: String
   });
-  module.exports = mongoose.model("Schooling", UserSchema);
+  module.exports = mongoose.model("Schooling", SchoolingSchema);

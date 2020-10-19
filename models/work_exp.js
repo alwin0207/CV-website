@@ -5,5 +5,5 @@ const WorkExpSchema = new mongoose.Schema({
     description: String,
     timepoint: String
   });
-  module.exports = mongoose.model("WorkExp", UserSchema);
+  module.exports = mongoose.model("WorkExp", WorkExpSchema);
   
