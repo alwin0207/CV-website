@@ -156,7 +156,7 @@
     align-items: stretch;
     justify-items: stretch;
     grid-template-columns: 80px 35% 1fr 70px 1fr 35% 80px;
-    grid-template-rows: 0px 30px 10px 30px 200px 0px;
+    grid-template-rows: 0px 30px 10px 30px min-content 200px;
     
     width: 100vw;
 }
@@ -166,7 +166,7 @@
     border-radius: 20px;
     display: grid;
     grid-template-columns: 25px 1fr;
-    grid-template-rows: 1fr;
+    grid-template-rows: 1fr 40px;
     justify-content: stretch;
     align-content: stretch;
     overflow: hidden;
@@ -174,7 +174,7 @@
 
 .timeblock_textblock_leftdecoration{
     grid-column: 1;
-    grid-row: 1;
+    grid-row: 1/ span 2;
     background-color: rgb(96, 167, 224);
     margin: 0px;
 }
@@ -190,7 +190,7 @@
 
 .timeline_timeblock:nth-child(2n+1) .timeblock_textblock{
     grid-column: 2;
-    grid-row: 2/ span 4;
+    grid-row: 2/ span 5;
     background-color: #e0e0e0;
 }
 
@@ -225,7 +225,7 @@
 
 .timeline_timeblock:nth-child(2n) .timeblock_textblock{
     grid-column: 6;
-    grid-row: 2/ span 4;
+    grid-row: 2/ span 5;
     background-color: #e0e0e0;
 }
 
@@ -239,7 +239,7 @@
 
 .timeline_timeblock:nth-last-child(n+2) .timeblock_vertical_line{
     grid-column: 4;
-    grid-row: 2/ span 4;
+    grid-row: 2/ span 5;
     background-color: rgb(47, 194, 133);
     justify-self: center;
     align-self: start;
@@ -290,4 +290,18 @@
     padding-bottom: 80px;
     margin-left: 80px;
     margin-bottom: 0px;
+}
+
+.timeblock_textblock h2{
+    font-size: 3.2vw;
+    margin-top: 40px;
+    margin-left: 40px;
+    margin-bottom: 30px;
+}
+
+.timeblock_textblock h3{
+   font-size: 1.8vw;
+   margin-left: 40px;
+   margin-top: 0px;
+   margin-bottom: 4px;
 }
