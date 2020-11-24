@@ -1,3 +1,8 @@
+a{
+   text-decoration: none;
+   color: inherit;
+}
+
 .profile_section{ /* Needs a container inside*/
     display: grid;
     align-content: stretch;
@@ -165,7 +170,7 @@
 .timeblock_textblock{
     border-radius: 20px;
     display: grid;
-    grid-template-columns: 25px 1fr;
+    grid-template-columns: 25px 1fr 25px;
     grid-template-rows: 1fr 40px;
     justify-content: stretch;
     align-content: stretch;
@@ -304,4 +309,168 @@
    margin-left: 40px;
    margin-top: 0px;
    margin-bottom: 4px;
+}
+
+footer{
+    display: grid;
+    grid-template-columns: min-content min-content min-content 1fr;
+    grid-template-rows: 20px 1fr 20px;
+    background-color: #292828;
+    color: #e0e0e0;
+}
+
+.footer_namecard{
+    grid-column: 1;
+    grid-row:2;
+}
+
+.footer_links{
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.footer_contact{
+    grid-column: 3;
+    grid-row: 2;
+}
+
+.namecard_content{
+    display: grid;
+    grid-template-columns: 100px 25px 10px 25px 10px 25px max-content 100px ;
+    grid-template-rows: 1fr min-content min-content 1fr 25px 1fr;
+    height: 100%;
+    align-self: stretch;
+    align-content: stretch;
+    justify-content: stretch;
+    border-right: 5px solid #e0e0e0c0;
+}
+
+.namecard_content h1{
+    grid-column: 2/ span 6;
+    grid-row: 2;
+    font-size: 80px;
+    font-weight: bolder;
+    margin-bottom: .2rem;
+}
+
+.namecard_content h2{
+    grid-column: 2/ span 6;
+    grid-row: 3;
+    font-size: 40px;
+    font-weight: normal;
+}
+
+.namecard_content a:nth-child(3){
+    grid-row: 5;
+    grid-column: 2;
+}
+
+.namecard_content a:nth-child(4){
+    grid-row: 5;
+    grid-column: 4;
+    align-self: center;
+}
+
+.namecard_content a:nth-child(5){
+    grid-row: 5;
+    grid-column: 6;
+}
+
+.namecard_content img{
+    width: 100%;
+    height: 100%;
+}
+
+
+
+.links_content{
+    display: grid;
+    grid-template-columns: 100px max-content;
+    grid-template-rows: 67px 17px;
+    grid-auto-rows: 35px;
+    height: 100%;
+}
+
+
+
+.links_content h1{
+    grid-row: 1;
+    grid-column: 2;
+    font-size: 50px;
+    border-bottom: 1px solid white;
+}
+
+.links_content a{
+    display: block;
+    font-size: 25px;
+    font-weight: normal;
+    align-self: center;
+    line-height: 1.2rem;
+}
+
+.links_content a::before{
+    content: "●";
+    color: green;
+    font-weight: bold;
+    display: inline-block;
+    width: 1.5em; 
+    padding-left: -1em; 
+}
+
+.links_content a:nth-child(2){
+    grid-row: 3;
+    grid-column: 2;
+}
+.links_content a:nth-child(3){
+    grid-row: 4;
+    grid-column: 2;
+}
+.links_content a:nth-child(4){
+    grid-row: 5;
+    grid-column: 2;
+}
+
+.contact_content{
+    display: grid;
+    grid-template-columns: 100px max-content;
+    grid-template-rows: 67px 20px;
+    grid-auto-rows: 35px;
+    height: 100%;
+}
+
+.contact_content h1{
+    grid-row: 1;
+    grid-column: 2;
+    font-size: 50px;
+    border-bottom: 1px solid white;
+}
+
+.contact_content h2{
+    display: block;
+    font-size: 25px;
+    font-weight: normal;
+    margin-bottom: 0px;
+    align-self: center;
+}
+
+.contact_content h2::before{
+    content: "●";
+    color: green;
+    font-weight: bold;
+    display: inline-block;
+    width: 1.5em; 
+    padding-left: -1em; 
+}
+
+.contact_content h2:nth-child(2){
+    grid-row: 3;
+    grid-column: 2;
+}
+.contact_content h2:nth-child(3){
+    grid-row: 4;
+    grid-column: 2;
+}
+.contact_content h2:nth-child(4){
+    grid-row: 5;
+    grid-column: 2;
 }
