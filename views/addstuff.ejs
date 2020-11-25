@@ -1,0 +1,18 @@
+<%- include("partials/header") %>
+<%- include("partials/navbar") %>
+
+<form action="/test" method="POST">
+    <select id="choice" name="choice">
+        <option value="schooling">Schooling</option>
+        <option value="work">Work experience</option>
+    </select><br><br>
+    <label for="title">Title:</label><br>
+    <input type="text" id="title" name="title"><br>
+    <label for="location">Location:</label><br>
+    <input type="text" id="location" name="location"><br>
+    <label for="description">Description:</label><br>
+    <input type="text" id="description" name="description"><br>
+    <label for="timepoint">timepoint:</label><br>
+    <input type="text" id="timepoint" name="timepoint"><br>
+    <button type="submit">Submit</button>
+</form>

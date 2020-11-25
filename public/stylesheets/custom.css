@@ -7,13 +7,15 @@ a{
     display: grid;
     align-content: stretch;
     justify-content: stretch;
+    font-family: 'Fahkwang', sans-serif;
+    font-weight: light;
 }
 
 .profile_section.intro{
     grid-template-columns: 5% 0.1fr 36% 2fr 5% 0.1fr 20% 1fr 5% 0.1fr;
     grid-template-rows: 2.8vw 0fr 28vw 0fr 1.4vw 0fr 8.4vw 0fr 2.8vw 0fr;
     background-color: hsl(0, 0%, 10%);
-    color: white;
+    color: #eeeeee;
 }
 
 .profile_section.explanation{
@@ -50,25 +52,26 @@ a{
     grid-column: 3/ span 2;
     grid-row: 3/ span 2;
     background-color: #151515;
-    color: white;
+    color: #eeeeee;
     border-radius: 20px;
 }
 
 .textspace h1{
-    font-size: 6vw;
+    font-size: 5.4vw;
     margin-top: 0px;
     margin-left: 0px;
     margin-right: 0px;
     margin-bottom: 4vw;
     word-spacing: 1rem;
+    
 }
 
 .textspace p{
     font-size: 2.1vw;
     margin: 0px;
     line-height: 1.3em;
-    word-spacing: 0.9rem;
-    letter-spacing: 0.2rem;
+    word-spacing: 0.3rem;
+    letter-spacing: 0.1rem;
 }
 
 .social_media_links{
@@ -90,29 +93,32 @@ a{
 .quotespace{
     display: grid;
     grid-template-columns: 50px 1fr 20px 0fr 1px 0fr fit-content(80%) 0fr 1px 0fr 20px 0fr 50px 1fr;
-    grid-template-rows: 30px 1fr 20px 0fr 1px 0fr min-content 0fr 1px 0fr 20px 0fr 110px 0fr 20px 0fr 50px 1fr;
+    grid-template-rows: 30px 1fr 20px 0fr 1px 0fr min-content 0fr 1px 0fr 20px 0fr 80px 0fr 20px 0fr 50px 1fr;
     align-items: stretch;
     justify-items: stretch;
-    font-size: 2.3vw;
+    font-size: 2.6vw;
     line-height: 1.1em;
-    word-spacing: 0.3rem;
+    word-spacing: 0.2rem;
+    font-family: 'Neuton', serif;
 }
 
 .quote_open{
     grid-column: 3/ span 2 ;
     grid-row: 3/ span 2 ;
-    font-size: 3vw;
-    font-weight: 900;
+    font-size: 4vw;
+    font-weight: 300;
+    font-family: 'Cardo', serif;
 }
 
 .quote_close{
     display: inline;
     grid-column: 11/ span 2;
     grid-row: 11/ span 2;
-    font-size: 3vw;
-    font-weight: 900;
+    font-size: 4vw;
+    font-weight: 300;
     line-height: 1em;
     margin: 0px;
+    font-family: 'Cardo', serif;
     
 }
 
@@ -120,11 +126,16 @@ a{
     grid-column: 7/span 1;
     grid-row: 7/span 1;
     margin: 0px;
+    font-weight: lighter;
 }
 
 .quote_author{
     grid-column: 7/ span 2;
     grid-row: 15/ span 2;
+    font-family: 'Neuton', serif;
+    font-weight: 200;
+    font-style: italic;
+    font-size: 2vw;
 }
 
 .profile_picture_space img{
@@ -142,7 +153,7 @@ a{
 }
 
 .timeline_topspace h1{
-    color: white;
+    color: #eeeeee;
     font-size: 5vw;
     padding-top: 80px;
     padding-bottom: 80px;
@@ -263,7 +274,7 @@ a{
    
 .timeline_section.schooling .timeblock_textblock{
    background-color: #292828;
-   color: white;
+   color: #ececec;
 }
 
 .timeline_section.schooling .timeblock_textblock_leftdecoration{
@@ -316,7 +327,24 @@ footer{
     grid-template-columns: min-content min-content min-content 1fr;
     grid-template-rows: 20px 1fr 20px;
     background-color: #292828;
-    color: #e0e0e0;
+    color: #eeeeee;
+    font-family: 'Fahkwang', sans-serif;
+}
+
+.background_space{
+    grid-column: 4;
+    grid-row: 1/ span 3;
+    position: relative;
+    overflow: hidden;
+}
+
+.background_space img{
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    width: auto;
+    max-height: 75%;
+    margin-bottom: 0px
 }
 
 .footer_namecard{
@@ -336,8 +364,8 @@ footer{
 
 .namecard_content{
     display: grid;
-    grid-template-columns: 100px 25px 10px 25px 10px 25px max-content 100px ;
-    grid-template-rows: 1fr min-content min-content 1fr 25px 1fr;
+    grid-template-columns: 100px 30px 10px 30px 10px 30px max-content 100px ;
+    grid-template-rows: 1fr min-content min-content 1fr 30px 1fr;
     height: 100%;
     align-self: stretch;
     align-content: stretch;
@@ -348,15 +376,15 @@ footer{
 .namecard_content h1{
     grid-column: 2/ span 6;
     grid-row: 2;
-    font-size: 80px;
-    font-weight: bolder;
+    font-size: 50px;
+    font-weight: bold;
     margin-bottom: .2rem;
 }
 
 .namecard_content h2{
     grid-column: 2/ span 6;
     grid-row: 3;
-    font-size: 40px;
+    font-size: 30px;
     font-weight: normal;
 }
 
@@ -386,7 +414,7 @@ footer{
 .links_content{
     display: grid;
     grid-template-columns: 100px max-content;
-    grid-template-rows: 67px 17px;
+    grid-template-rows: 57px 15px;
     grid-auto-rows: 35px;
     height: 100%;
 }
@@ -396,13 +424,13 @@ footer{
 .links_content h1{
     grid-row: 1;
     grid-column: 2;
-    font-size: 50px;
+    font-size: 40px;
     border-bottom: 1px solid white;
 }
 
 .links_content a{
     display: block;
-    font-size: 25px;
+    font-size: 23px;
     font-weight: normal;
     align-self: center;
     line-height: 1.2rem;
@@ -411,6 +439,7 @@ footer{
 .links_content a::before{
     content: "●";
     color: green;
+    font-size: 30px;
     font-weight: bold;
     display: inline-block;
     width: 1.5em; 
@@ -433,7 +462,7 @@ footer{
 .contact_content{
     display: grid;
     grid-template-columns: 100px max-content;
-    grid-template-rows: 67px 20px;
+    grid-template-rows: 57px 15px;
     grid-auto-rows: 35px;
     height: 100%;
 }
@@ -441,13 +470,13 @@ footer{
 .contact_content h1{
     grid-row: 1;
     grid-column: 2;
-    font-size: 50px;
+    font-size: 40px;
     border-bottom: 1px solid white;
 }
 
 .contact_content h2{
     display: block;
-    font-size: 25px;
+    font-size: 23px;
     font-weight: normal;
     margin-bottom: 0px;
     align-self: center;
@@ -456,6 +485,7 @@ footer{
 .contact_content h2::before{
     content: "●";
     color: green;
+    font-size: 30px;
     font-weight: bold;
     display: inline-block;
     width: 1.5em; 
@@ -473,4 +503,9 @@ footer{
 .contact_content h2:nth-child(4){
     grid-row: 5;
     grid-column: 2;
+}
+
+.navbarless_full{
+    height: calc(100vh - 285px);
+    width: 100vw;
 }

@@ -18,7 +18,8 @@
         <%- include("partials/timelineblock", {timeblockInput: timeline.schooling[i]}) %>
     <%}%>
 </div>
-<form action="/test" method="POST">
+<%- include("partials/footer")%>
+<!-- <form action="/test" method="POST">
     <select id="choice" name="choice">
         <option value="schooling">Schooling</option>
         <option value="work">Work experience</option>
@@ -32,4 +33,4 @@
     <label for="timepoint">timepoint:</label><br>
     <input type="text" id="timepoint" name="timepoint"><br>
     <button type="submit">Submit</button>
-</form>
+</form> -->

@@ -74,7 +74,7 @@ router.get("/", function (req, res) {
     });
   });
 
-  router.post("/test", function (req, res) {
+  router.post("/test", isLoggedIn, function (req, res) {
     if(req.body.choice === "schooling"){
       var newSchooling = new Schooling({
         title: req.body.title,
@@ -124,18 +124,25 @@ router.get("/register", function (req, res) {
   
   // ------ Post ------ //
   router.post("/register", function (req, res) {
-    let newUser = new User({ username: req.body.username });
+
+    if (req.body.register === process.env.REGISTERSECRET){
+
+      let newUser = new User({ username: req.body.username });
   
-    User.register(newUser, req.body.password, function (err, user) {
-      if (err) {
-        console.log(err);
-        res.redirect("/register");
-      } else {
-        passport.authenticate("local")(req, res, function () {
-          res.redirect("back");
-        });
-      }
-    });
+      User.register(newUser, req.body.password, function (err, user) {
+        if (err) {
+         console.log(err);
+         res.redirect("/register");
+       } else {
+         passport.authenticate("local")(req, res, function () {
+            res.redirect("back");
+          });
+        }
+      });
+    }
+    else{
+      res.redirect("back");
+    }
   });
   
   //================================================================================
@@ -167,7 +174,17 @@ router.get("/register", function (req, res) {
     req.logout();
     res.redirect("back");
   });
+
+   //================================================================================
+  // Invul form routes
+  //================================================================================
   
+  // Niet beschermd, dat moet nog door connecties binnen de database te leggen.
+
+  router.get("/addstuff", isLoggedIn, function (req, res) {
+    res.render("addstuff.ejs");
+  });
+
   //================================================================================
   // Middleware
   //================================================================================
