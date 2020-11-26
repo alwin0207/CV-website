@@ -81,13 +81,17 @@ a{
 
 .social_media_links a{
     display: block;
-    height: 5vw;
-    width: 5vw;
+    height: 3vw;
+    width: 3vw;
     background-color: rgb(19, 136, 77);
     text-decoration: none;
     margin-left: 1.5vw;
     border-radius: 50%;
     
+}
+
+.social_media_links a:nth-child(1){
+    margin-left: 0px;
 }
 
 .quotespace{
@@ -370,7 +374,7 @@ footer{
     align-self: stretch;
     align-content: stretch;
     justify-content: stretch;
-    border-right: 5px solid #e0e0e0c0;
+    border-right: 4px solid #e0e0e0c0;
 }
 
 .namecard_content h1{
@@ -425,6 +429,8 @@ footer{
     grid-row: 1;
     grid-column: 2;
     font-size: 40px;
+    width: fit-content;
+    padding-right: 30px;
     border-bottom: 1px solid white;
 }
 
@@ -438,7 +444,7 @@ footer{
 
 .links_content a::before{
     content: "●";
-    color: green;
+    color: rgb(19, 136, 77);
     font-size: 30px;
     font-weight: bold;
     display: inline-block;
@@ -468,9 +474,12 @@ footer{
 }
 
 .contact_content h1{
+    display: inline-block;
     grid-row: 1;
     grid-column: 2;
     font-size: 40px;
+    width: fit-content;
+    padding-right: 30px;
     border-bottom: 1px solid white;
 }
 
@@ -484,7 +493,7 @@ footer{
 
 .contact_content h2::before{
     content: "●";
-    color: green;
+    color: rgb(19, 136, 77);
     font-size: 30px;
     font-weight: bold;
     display: inline-block;
