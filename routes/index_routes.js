@@ -6,8 +6,10 @@ const express = require("express"),
   bodyParser = require("body-parser"),
   passport = require("passport"),
   User = require("../models/user.js"),
-  Schooling = require("../models/schooling.js"),
-  WorkExp = require("../models/work_exp.js"),
+  // Schooling = require("../models/schooling.js"),
+  // WorkExp = require("../models/work_exp.js"),
+  Schooling = require("../models/schooling copy.js"),
+  WorkExp = require("../models/work_exp copy.js"),
   authentication = require("../controllers/authentication.js");
 
 //================================================================================
@@ -67,7 +69,8 @@ router.get("/", function (req, res) {
             schooling=foundSchooling;
             console.log(workExp);
             console.log(schooling);
-            res.render("timeline.ejs", {timeline: {workExp: workExp, schooling:schooling}});
+            //res.render("timeline.ejs", {timeline: {workExp: workExp, schooling:schooling}});
+            res.render("timeline copy.ejs", {timeline: {workExp: workExp, schooling:schooling}});
           }
         });
       }
@@ -182,7 +185,57 @@ router.get("/register", function (req, res) {
   // Niet beschermd, dat moet nog door connecties binnen de database te leggen.
 
   router.get("/addstuff", isLoggedIn, function (req, res) {
-    res.render("addstuff.ejs");
+    res.render("addstuff copy.ejs");
+  });
+
+  router.post("/addschool", isLoggedIn, function (req, res) {// need error handling in case input is wrong
+    console.log(req.body.dateStart);
+    if(isMonthYear(req.body.dateStart) && isMonthYear(req.body.dateEnd) ){
+      var newSchooling = new Schooling({
+        education: req.body.education,
+        track: req.body.track,
+        institute: req.body.institute,
+        location: req.body.location,
+        startDate: req.body.dateStart,
+        endDate: req.body.dateEnd,
+        timepoint: req.body.timepoint,
+        finished: req.body.finished
+      });
+      newSchooling.save(function (err, schoolingSaved) {
+        if (err) {
+          return console.error(err);
+        }
+        else{
+          console.log(schoolingSaved);
+          res.redirect("/test");
+        }
+      });
+    }
+    
+  });
+
+  router.post("/addwork", isLoggedIn, function (req, res) {// need error handling in case input is wrong
+    if(isMonthYear(req.body.dateStart) && isMonthYear(req.body.dateEnd)){
+      var newWorkExp = new WorkExp({
+        startDate: req.body.dateStart,
+        endDate: req.body.dateEnd,
+        jobdescription: [req.body.description],
+        timepoint: req.body.timepoint,
+        company: req.body.company,
+        jobFunction: req.body.jobfunction,
+        location: req.body.location
+      });
+      newWorkExp.save(function (err, workExpSaved) {
+        if (err) {
+          return console.error(err);
+        }
+        else{
+          console.log(workExpSaved);
+          res.redirect("/test");
+        }
+      });
+    }
+    
   });
 
   //================================================================================
@@ -195,6 +248,28 @@ router.get("/register", function (req, res) {
     }
     res.redirect("/login");
   }
+
+  function isMonthYear(mYString){
+    if(mYString.length !== 7){
+        console.log("not the right length");
+        return false;
+    }
+    else if(mYString.charAt(4) !== "-"){
+        console.log("no - at the right spot");
+        return false;
+    }
+    else if((isNaN(mYString.split("-")[0])) || (mYString.split("-")[0].length !== 4)){
+        console.log("No number before -");
+        return false;
+    }
+    else if((isNaN(mYString.split("-")[1])) || mYString.split("-")[1].length !== 2){
+        console.log("No number after -");
+        return false;
+    }
+    else{
+        return true;
+    }
+}
   
   //================================================================================
   // Export

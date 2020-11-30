@@ -1,0 +1,19 @@
+<div class="timeline_timeblock">
+    <div class="timeblock_textblock">
+        <div class="timeblock_textblock_leftdecoration"></div>
+        <div class="timeblock_textblock_content">
+            <h2><%= timeblockInput.education %></h2>
+            <h4><%= timeblockInput.track %></h4>
+            <h3><%= timeblockInput.institute %>, <%= timeblockInput.location%> <span class= "jaren">(<%= timeblockInput.startDate.slice(0,4)%> - <%=timeblockInput.endDate.slice(0,4)%>)</span></h3>
+            <!-- <h3>(<%= timeblockInput.startDate.slice(0,4)%> - <%=timeblockInput.endDate.slice(0,4)%>)</h3> -->
+            <% if (timeblockInput.finished === "yes"){ %>
+                <h3>Behaald</h3>
+            <%}%>
+        </div>
+    </div>
+    <div class="timeblock_horizontal_line"></div>
+    <div class="timeblock_vertical_line"></div>
+    <div class="timeblock_timepoint">
+        <h1><%= timeblockInput.timepoint %></h1>
+    </div>
+</div>

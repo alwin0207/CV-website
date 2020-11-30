@@ -154,6 +154,8 @@ a{
     background-color: #292828;
     min-height: 80px;
     width: 100vw;
+    font-family: 'Fahkwang', sans-serif;
+    font-weight: light;
 }
 
 .timeline_topspace h1{
@@ -167,6 +169,8 @@ a{
 
 .timeline_section{
     background-color: #292828;
+    font-family: 'Fahkwang', sans-serif;
+    font-weight: light;
 }
 
 
@@ -232,6 +236,9 @@ a{
     width: 100%;
     text-align: center;
     align-self: center;
+    font-size: 2.2vw;
+    margin-bottom: 0px;
+    font-weight: bold;
 }
 
 .temp_line_grid_basis{
@@ -316,14 +323,28 @@ a{
     font-size: 3.2vw;
     margin-top: 40px;
     margin-left: 40px;
-    margin-bottom: 30px;
+    margin-bottom: 0px;
 }
 
 .timeblock_textblock h3{
    font-size: 1.8vw;
    margin-left: 40px;
    margin-top: 0px;
-   margin-bottom: 4px;
+   margin-bottom: 0px;
+}
+
+.jaren{
+    font-size: 1.1vw;
+    font-style: italic;
+    text-align: center;
+}
+
+.timeblock_textblock h4{
+    font-size: 1.8vw;
+    margin-left: 40px;
+    margin-top: 0px;
+    margin-bottom: 36px;
+    font-style: italic;
 }
 
 footer{

@@ -1,0 +1,19 @@
+<div class="timeline_timeblock">
+    <div class="timeblock_textblock">
+        <div class="timeblock_textblock_leftdecoration"></div>
+        <div class="timeblock_textblock_content">
+            <h2><%= timeblockInput.company%> (<%=timeblockInput.location%>)</h2>
+            <h4><%= timeblockInput.jobFunction%> (<%= timeblockInput.startDate.slice(0,4)%> - <%=timeblockInput.endDate.slice(0,4)%>)%></h4>
+            <ul>
+                <% for(i=0; i<timeblockInput.jobdescription.length; i++){ %>
+                    <li><%=timeblockInput.jobdescription[i]%></li>
+                <%}%>
+            </ul>
+        </div>
+    </div>
+    <div class="timeblock_horizontal_line"></div>
+    <div class="timeblock_vertical_line"></div>
+    <div class="timeblock_timepoint">
+        <h1><%= timeblockInput.timepoint %></h1>
+    </div>
+</div>
