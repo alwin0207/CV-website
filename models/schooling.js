@@ -8,5 +8,5 @@ const SchoolingSchema = new mongoose.Schema({
   endDate: String,
   timepoint: String,
   finished: String
-  });
-  module.exports = mongoose.model("Schoolingv2", SchoolingSchema);
+});
+module.exports = mongoose.model("Schoolingv2", SchoolingSchema);
