@@ -6,10 +6,8 @@ const express = require("express"),
   bodyParser = require("body-parser"),
   passport = require("passport"),
   User = require("../models/user.js"),
-  // Schooling = require("../models/schooling.js"),
-  // WorkExp = require("../models/work_exp.js"),
-  Schooling = require("../models/schooling copy.js"),
-  WorkExp = require("../models/work_exp copy.js"),
+  Schooling = require("../models/schooling.js"),
+  WorkExp = require("../models/work_exp.js"),
   authentication = require("../controllers/authentication.js");
 
 //================================================================================
@@ -21,36 +19,6 @@ const router = express.Router();
 //================================================================================
 // Index Routes
 //================================================================================
-var myTimeline = {
-  workExp: [
-    {
-      title: "dit is een test (nr 1)" ,
-      location: "groningen" ,
-      description: "blak kslkdj kdeiek ki iki ben alwin en dit is een test" ,
-      timePoint: "Ba"
-    },
-    {
-      title: "dit is een test (nr 2)" ,
-      location: "groningen" ,
-      description: "blak kslkdj kdeiek ki iki ben alwin en dit is een test" ,
-      timePoint: "Cb"
-    }
-  ],
-  schooling:[
-    {
-      title: "dit is een test (nr 1 schooling)" ,
-      location: "groningen" ,
-      description: "blak kslkdj kdeiek ki iki ben alwin en dit is een test" ,
-      timePoint: "Dc"
-    },
-    {
-      title: "dit is een test (nr 2 schooling)" ,
-      location: "groningen" ,
-      description: "blak kslkdj kdeiek ki iki ben alwin en dit is een test" ,
-      timePoint: "Ed"
-    }
-  ]
-};
 
 router.get("/", function (req, res) {
     res.render("main_page.ejs");
@@ -69,8 +37,7 @@ router.get("/", function (req, res) {
             schooling=foundSchooling;
             console.log(workExp);
             console.log(schooling);
-            //res.render("timeline.ejs", {timeline: {workExp: workExp, schooling:schooling}});
-            res.render("timeline copy.ejs", {timeline: {workExp: workExp, schooling:schooling}});
+            res.render("timeline.ejs", {timeline: {workExp: workExp, schooling:schooling}});
           }
         });
       }
@@ -104,7 +71,6 @@ router.get("/", function (req, res) {
         res.redirect("/test");
       });
     }
-    
   });
 
   
@@ -185,7 +151,7 @@ router.get("/register", function (req, res) {
   // Niet beschermd, dat moet nog door connecties binnen de database te leggen.
 
   router.get("/addstuff", isLoggedIn, function (req, res) {
-    res.render("addstuff copy.ejs");
+    res.render("addstuff.ejs");
   });
 
   router.post("/addschool", isLoggedIn, function (req, res) {// need error handling in case input is wrong

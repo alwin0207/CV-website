@@ -19,8 +19,7 @@ const indexRoutes = require("./routes/index_routes.js");
 const app = express();
 
 // ... mongoose ...
-const dbLocation =
-  process.env.DATABASELOCATION || "mongodb://localhost/onlineCV";
+const dbLocation = process.env.DATABASELOCATION || "mongodb://localhost/onlineCV";
 mongoose
   .connect(dbLocation, {
     useNewUrlParser: true,
@@ -28,7 +27,7 @@ mongoose
     useUnifiedTopology: true,
   })
   .then(() => {
-    console.log("Connected to Corona Check DB");
+    console.log("Connected to CV website DB");
   })
   .catch((err) => {
     console.log("ERROR:", err.message);

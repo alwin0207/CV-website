@@ -6,7 +6,7 @@
 <div class="timeline_section"></div>
 <div class="timeline_section work_experience">
     <% for(i=0; i<timeline.workExp.length; i++){%>
-        <%- include("partials/timelineblock", {timeblockInput: timeline.workExp[i]}) %>
+        <%- include("partials/timelineblock_work", {timeblockInput: timeline.workExp[i]}) %>
     <%}%>
 </div>
 <div class="timeline_section skills"></div>
@@ -15,22 +15,11 @@
 </div>
 <div class="timeline_section schooling">
     <% for(i=0; i<timeline.schooling.length; i++){%>
-        <%- include("partials/timelineblock", {timeblockInput: timeline.schooling[i]}) %>
+        <%- include("partials/timelineblock_schooling", {timeblockInput: timeline.schooling[i]}) %>
     <%}%>
 </div>
+<div>
+    <a href="/addstuff">add</a>
+</div>
+
 <%- include("partials/footer")%>
-<!-- <form action="/test" method="POST">
-    <select id="choice" name="choice">
-        <option value="schooling">Schooling</option>
-        <option value="work">Work experience</option>
-    </select><br><br>
-    <label for="title">Title:</label><br>
-    <input type="text" id="title" name="title"><br>
-    <label for="location">Location:</label><br>
-    <input type="text" id="location" name="location"><br>
-    <label for="description">Description:</label><br>
-    <input type="text" id="description" name="description"><br>
-    <label for="timepoint">timepoint:</label><br>
-    <input type="text" id="timepoint" name="timepoint"><br>
-    <button type="submit">Submit</button>
-</form> -->

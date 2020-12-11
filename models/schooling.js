@@ -1,8 +1,12 @@
 const mongoose = require("mongoose");
 const SchoolingSchema = new mongoose.Schema({
-    title: String,
-    location: String,
-    description: String,
-    timepoint: String
+  education: String,
+  track: String,
+  institute: String,
+  location: String,
+  startDate: String,
+  endDate: String,
+  timepoint: String,
+  finished: String
   });
-  module.exports = mongoose.model("Schooling", SchoolingSchema);
+  module.exports = mongoose.model("Schoolingv2", SchoolingSchema);

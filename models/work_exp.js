@@ -1,9 +1,12 @@
 const mongoose = require("mongoose");
 const WorkExpSchema = new mongoose.Schema({
-    title: String,
+    company: String,
+    jobFunction: String,
     location: String,
-    description: String,
+    jobdescription: [String],
+    startDate: String,
+    endDate: String,
     timepoint: String
   });
-  module.exports = mongoose.model("WorkExp", WorkExpSchema);
+  module.exports = mongoose.model("WorkExpv2", WorkExpSchema);
   

@@ -1,18 +1,44 @@
 <%- include("partials/header") %>
 <%- include("partials/navbar") %>
 
-<form action="/test" method="POST">
-    <select id="choice" name="choice">
-        <option value="schooling">Schooling</option>
-        <option value="work">Work experience</option>
-    </select><br><br>
-    <label for="title">Title:</label><br>
-    <input type="text" id="title" name="title"><br>
+<form action="/addschool" method="POST">
+    <label for="education">Opleiding:</label><br>
+    <input type="text" id="education" name="education"><br>
     <label for="location">Location:</label><br>
     <input type="text" id="location" name="location"><br>
+    <label for="track">Track:</label><br>
+    <input type="text" id="track" name="track"><br>
+    <label for="institute">School:</label><br>
+    <input type="text" id="institute" name="institute"><br>
+    <label for="finished">Degree?:</label>
+    <select id="finished" name="finished">
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+        <option value="ongoing">Ongoing</option>
+    </select><br>
+    <label for="dateStart">Startdatum:</label><br>
+    <input type="month" id="dateStart" name="dateStart"><br>
+    <label for="dateEnd">Einddatum:</label><br>
+    <input type="month" id="dateEnd" name="dateEnd"><br>
+    <label for="timepoint">Timepoint:</label><br>
+    <input type="text" id="timepoint" name="timepoint"><br><br>
+    <button type="submit">Submit</button>
+</form>
+<br><br><br>
+<form action="/addwork" method="POST">
+    <label for="company">Company:</label><br>
+    <input type="text" id="company" name="company"><br>
+    <label for="jobfunction">Jobfunction:</label><br>
+    <input type="text" id="jobfunction" name="jobfunction"><br>
+    <label for="location">Location:</label><br>
+    <input type="text" id="location" name="location"><br>
+    <label for="dateStart">Startdatum:</label><br>
+    <input type="month" id="dateStart" name="dateStart"><br>
+    <label for="dateEnd">Einddatum:</label><br>
+    <input type="month" id="dateEnd" name="dateEnd"><br>
     <label for="description">Description:</label><br>
     <input type="text" id="description" name="description"><br>
     <label for="timepoint">timepoint:</label><br>
-    <input type="text" id="timepoint" name="timepoint"><br>
+    <input type="text" id="timepoint" name="timepoint"><br><br>
     <button type="submit">Submit</button>
 </form>
