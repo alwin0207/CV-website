@@ -200,6 +200,7 @@ a{
     grid-column: 1;
     grid-row: 1/ span 2;
     background-color: rgb(96, 167, 224);
+    background-color: rgb(65,157,180);
     margin: 0px;
 }
 
@@ -339,6 +340,16 @@ a{
     text-align: center;
 }
 
+.workyear{
+    display: inline-block;
+    font-size: 1.1vw;
+}
+.workloc{
+    display: inline-block;
+    /* font-size: 1.5vw; */
+    text-align: center;
+}
+
 .timeblock_textblock h4{
     font-size: 1.8vw;
     margin-left: 40px;
@@ -346,6 +357,7 @@ a{
     margin-bottom: 36px;
     font-style: italic;
 }
+
 
 footer{
     display: grid;
@@ -538,4 +550,58 @@ footer{
 .navbarless_full{
     height: calc(100vh - 285px);
     width: 100vw;
+}
+
+.myNav{
+    display: flex;
+    position: sticky;
+    top:0px;
+    left:0px;
+    align-content: center;
+    width: 100%;
+    height: 75px;
+    background-color: #505050;
+    color: #e0e0e0;
+}
+
+.myLogo{
+    margin-left:80px;
+    width: 100px;
+    background-image: url("/ab.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.navContent{
+    margin-left: 80px;
+    display: inline-flex;
+    justify-content: safe;
+    align-items: center;
+    margin: 0px;
+}
+
+.navContent li{
+    font-size: 2.5vw;
+    list-style: none;
+    margin-left: 2vw;
+}
+
+.button_space{
+    flex-grow: 100;
+    display:flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.contact_button{
+    
+    margin-right: 80px;
+    background-color: rgb(38, 120, 226);
+    background-color: rgb(65,157,180);
+    color: #e0e0e0;
+    padding: 2px 20px;
+    border: none;
+    border-radius: 20px;
+    font-size: 2.5vw;
 }
