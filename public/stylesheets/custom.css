@@ -605,3 +605,43 @@ footer{
     border-radius: 20px;
     font-size: 2.5vw;
 }
+
+#notfoundpage{
+    background-image: url(/not_found.svg);
+    height: 100vh;
+    width: 100vw;
+    background-size: 70vw;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: bottom ;
+}
+
+#notfoundpage a{
+    display: block;
+    padding: 30px 50px;
+    background-color: blue;
+    text-decoration: none;
+    color: white;
+    align-self: flex-end;
+    margin-bottom: 2%;
+}
+
+#constructionpage{
+    background-image: url(/under_construction_background.svg);
+    height: 100vh;
+    width: 100vw;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#constructionpage a{
+    position: absolute;
+    top: 60%;
+    left: 10%;
+    padding: 30px 50px;
+    background-color: blue;
+    text-decoration: none;
+    color: white;
+}

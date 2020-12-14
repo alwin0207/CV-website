@@ -12,6 +12,7 @@ const express = require("express"),
 // ------ Adding route dependancies ------
 
 const indexRoutes = require("./routes/index_routes.js");
+const timelineRoutes = require("./routes/timeline_formroutes.js");
 
 /* ------ Setting up dependancies and connections ------ */
 
@@ -64,6 +65,7 @@ app.use(express.static(__dirname + "/public"));
 
 // ... Using router ...
 app.use(indexRoutes);
+app.use(timelineRoutes);
 
 ////////////////////////////////////////////////////////////////////////////////////
 // ......------ Listnening to server------......
