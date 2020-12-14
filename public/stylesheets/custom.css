@@ -1,15 +1,41 @@
 a{
-   text-decoration: none;
-   color: inherit;
-}
+    text-decoration: none;
+    color: inherit;
+ }
 
-.profile_section{ /* Needs a container inside*/
+/*//////////////////////////////////////////////////////////////////////////////////
+Profile page / Main page
+//////////////////////////////////////////////////////////////////////////////////*/
+
+.profile_section{
     display: grid;
     align-content: stretch;
     justify-content: stretch;
     font-family: 'Fahkwang', sans-serif;
     font-weight: light;
 }
+
+.textspace h1{
+    font-size: 5.4vw;
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: 4vw;
+    word-spacing: 1rem;
+    
+}
+
+.textspace p{
+    font-size: 2.1vw;
+    margin: 0px;
+    line-height: 1.3em;
+    word-spacing: 0.3rem;
+    letter-spacing: 0.1rem;
+}
+
+/*--------------------
+Introduction
+--------------------*/
 
 .profile_section.intro{
     grid-template-columns: 5% 0.1fr 36% 2fr 5% 0.1fr 20% 1fr 5% 0.1fr;
@@ -41,39 +67,6 @@ a{
     grid-row: 7/span 2;
 }
 
-
-
-.explanation .textspace{
-    grid-column: 7/ span 2;
-    grid-row: 3/ span 2;
-}
-
-.explanation .quotespace{
-    grid-column: 3/ span 2;
-    grid-row: 3/ span 2;
-    background-color: #151515;
-    color: #eeeeee;
-    border-radius: 20px;
-}
-
-.textspace h1{
-    font-size: 5.4vw;
-    margin-top: 0px;
-    margin-left: 0px;
-    margin-right: 0px;
-    margin-bottom: 4vw;
-    word-spacing: 1rem;
-    
-}
-
-.textspace p{
-    font-size: 2.1vw;
-    margin: 0px;
-    line-height: 1.3em;
-    word-spacing: 0.3rem;
-    letter-spacing: 0.1rem;
-}
-
 .social_media_links{
     display: flex;
     align-items: center;
@@ -92,6 +85,28 @@ a{
 
 .social_media_links a:nth-child(1){
     margin-left: 0px;
+}
+
+.profile_picture_space img{
+    height: 100%;
+    width: 100%;
+}
+
+/*--------------------
+Design Filosofie
+--------------------*/
+
+.explanation .textspace{
+    grid-column: 7/ span 2;
+    grid-row: 3/ span 2;
+}
+
+.explanation .quotespace{
+    grid-column: 3/ span 2;
+    grid-row: 3/ span 2;
+    background-color: #151515;
+    color: #eeeeee;
+    border-radius: 20px;
 }
 
 .quotespace{
@@ -142,13 +157,13 @@ a{
     font-size: 2vw;
 }
 
-.profile_picture_space img{
-    height: 100%;
-    width: 100%;
-}
+/*//////////////////////////////////////////////////////////////////////////////////
+Timeline page
+//////////////////////////////////////////////////////////////////////////////////*/
 
-
-/* timeline */
+/*--------------------
+Section Work
+--------------------*/
 
 .timeline_topspace{
     background-color: #292828;
@@ -173,7 +188,64 @@ a{
     font-weight: light;
 }
 
+.title_space_schooling{
+    background-color: #dbdbdb;
+    min-height: 80px;
+    width: 100vw;
+}
 
+.title_space_schooling h1{
+    color: black;
+    font-size: 5vw;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    margin-left: 80px;
+    margin-bottom: 0px;
+}
+
+/*Timeblock fonts*/
+
+.timeblock_textblock h2{
+    font-size: 3.2vw;
+    margin-top: 40px;
+    margin-left: 40px;
+    margin-bottom: 0px;
+}
+
+.timeblock_textblock h3{
+   font-size: 1.8vw;
+   margin-left: 40px;
+   margin-top: 0px;
+   margin-bottom: 0px;
+}
+
+.jaren{
+    font-size: 1.1vw;
+    font-style: italic;
+    text-align: center;
+}
+
+.workyear{
+    display: inline-block;
+    font-size: 1.1vw;
+}
+.workloc{
+    display: inline-block;
+    /* font-size: 1.5vw; */
+    text-align: center;
+}
+
+.timeblock_textblock h4{
+    font-size: 1.8vw;
+    margin-left: 40px;
+    margin-top: 0px;
+    margin-bottom: 36px;
+    font-style: italic;
+}
+
+/*--------------------
+timeblock (1 item on the timeline)
+--------------------*/
 
 .timeline_timeblock{
     display: grid;
@@ -181,10 +253,8 @@ a{
     justify-items: stretch;
     grid-template-columns: 80px 35% 1fr 70px 1fr 35% 80px;
     grid-template-rows: 0px 30px 10px 30px min-content 200px;
-    
     width: 100vw;
 }
-
 
 .timeblock_textblock{
     border-radius: 20px;
@@ -280,6 +350,8 @@ a{
     padding-bottom: 80px;
 }
 
+/*Color difference*/
+
 .timeline_section.schooling{
     background-color:#dbdbdb;
    }
@@ -305,59 +377,9 @@ a{
     background-color: #8f8f8f;
 }
 
-.title_space_schooling{
-    background-color: #dbdbdb;
-    min-height: 80px;
-    width: 100vw;
-}
-
-.title_space_schooling h1{
-    color: black;
-    font-size: 5vw;
-    padding-top: 80px;
-    padding-bottom: 80px;
-    margin-left: 80px;
-    margin-bottom: 0px;
-}
-
-.timeblock_textblock h2{
-    font-size: 3.2vw;
-    margin-top: 40px;
-    margin-left: 40px;
-    margin-bottom: 0px;
-}
-
-.timeblock_textblock h3{
-   font-size: 1.8vw;
-   margin-left: 40px;
-   margin-top: 0px;
-   margin-bottom: 0px;
-}
-
-.jaren{
-    font-size: 1.1vw;
-    font-style: italic;
-    text-align: center;
-}
-
-.workyear{
-    display: inline-block;
-    font-size: 1.1vw;
-}
-.workloc{
-    display: inline-block;
-    /* font-size: 1.5vw; */
-    text-align: center;
-}
-
-.timeblock_textblock h4{
-    font-size: 1.8vw;
-    margin-left: 40px;
-    margin-top: 0px;
-    margin-bottom: 36px;
-    font-style: italic;
-}
-
+/*//////////////////////////////////////////////////////////////////////////////////
+Timeline page
+//////////////////////////////////////////////////////////////////////////////////*/
 
 footer{
     display: grid;
@@ -547,6 +569,10 @@ footer{
     grid-column: 2;
 }
 
+/*//////////////////////////////////////////////////////////////////////////////////
+Navbar
+//////////////////////////////////////////////////////////////////////////////////*/
+
 .navbarless_full{
     height: calc(100vh - 285px);
     width: 100vw;
@@ -606,12 +632,16 @@ footer{
     font-size: 2.5vw;
 }
 
+/*//////////////////////////////////////////////////////////////////////////////////
+Not found & under construction page
+//////////////////////////////////////////////////////////////////////////////////*/
+
 #notfoundpage{
     background-image: url(/not_found.svg);
     height: 100vh;
     width: 100vw;
-    background-size: 70vw;
-    background-position: center;
+    background-size: 65vw;
+    background-position: 50% 30%;
     background-repeat: no-repeat;
     display: flex;
     justify-content: center;
@@ -625,7 +655,7 @@ footer{
     text-decoration: none;
     color: white;
     align-self: flex-end;
-    margin-bottom: 2%;
+    margin-bottom: 5%;
 }
 
 #constructionpage{
