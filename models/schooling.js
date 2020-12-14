@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+
 const SchoolingSchema = new mongoose.Schema({
   education: String,
   track: String,
@@ -9,4 +10,5 @@ const SchoolingSchema = new mongoose.Schema({
   timepoint: String,
   finished: String
 });
+
 module.exports = mongoose.model("Schoolingv2", SchoolingSchema);

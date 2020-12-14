@@ -54,6 +54,7 @@ router.post("/addschool", isLoggedIn, monthYear.isMonthYearCheck, function (req,
     timepoint: req.body.timepoint,
     finished: req.body.finished
   });
+  
   newSchooling.save(function (err, schoolingSaved) {
     if (err) {
       return console.error(err);
@@ -63,6 +64,7 @@ router.post("/addschool", isLoggedIn, monthYear.isMonthYearCheck, function (req,
       res.redirect("/test");
     }
   });
+
 });
   
 router.post("/addwork", isLoggedIn, monthYear.isMonthYearCheck, function (req, res) {// need error handling in case input is wrong
@@ -75,6 +77,7 @@ router.post("/addwork", isLoggedIn, monthYear.isMonthYearCheck, function (req, r
     jobFunction: req.body.jobfunction,
     location: req.body.location
   });
+
   newWorkExp.save(function (err, workExpSaved) {
     if (err) {
       return console.error(err);
@@ -83,7 +86,8 @@ router.post("/addwork", isLoggedIn, monthYear.isMonthYearCheck, function (req, r
       console.log(workExpSaved);
       res.redirect("/test");
     }
-  });   
+  });  
+   
 });
 
 //================================================================================

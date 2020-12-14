@@ -16,15 +16,6 @@ const UserSchema = new mongoose.Schema({
     type: mongoose.Schema.Types.ObjectId,
     ref: "WorkExp"
   }]  
-  //,
-  //    projects: [{
-  //     type: mongoose.Schema.Types.ObjectId,
-  //     ref: "ScrProject"
-  //    }],
-  //    comments: [{
-  //     type: mongoose.Schema.Types.ObjectId,
-  //     ref: "Comment"
-  //    }]
 });
 
 UserSchema.plugin(passportLocalMongoose);

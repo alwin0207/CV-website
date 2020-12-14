@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+
 const WorkExpSchema = new mongoose.Schema({
   company: String,
   jobFunction: String,
@@ -8,4 +9,5 @@ const WorkExpSchema = new mongoose.Schema({
   endDate: String,
   timepoint: String
 });
+
 module.exports = mongoose.model("WorkExpv2", WorkExpSchema);

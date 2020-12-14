@@ -2,7 +2,7 @@
     <div class="timeblock_textblock">
         <div class="timeblock_textblock_leftdecoration"></div>
         <div class="timeblock_textblock_content">
-            <h2><%= timeblockInput.company%> <!--<span class="workloc">(<%=timeblockInput.location%>)</span> --></h2>
+            <h2><%= timeblockInput.company%></h2>
             <h4><%= timeblockInput.jobFunction%> <br> <span class="workyear"><%=timeblockInput.location%> (<%= timeblockInput.startDate.slice(0,4)%> - <%=timeblockInput.endDate.slice(0,4)%>)</span></h4>
             <ul>
                 <% for(j=0; j<timeblockInput.jobdescription.length; j++){ %>
