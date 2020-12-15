@@ -114,9 +114,9 @@ router.get("/logout", function (req, res) {
 // Not-found routes
 //================================================================================
 
-router.get("*", function (req, res) {
-  res.render("not_existing.ejs");
-});
+// router.get("*", function (req, res) {
+//   res.render("not_existing.ejs");
+// });
 
 //================================================================================
 // Middleware

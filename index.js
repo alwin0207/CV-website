@@ -20,7 +20,7 @@ const timelineRoutes = require("./routes/timeline_formroutes.js");
 const app = express();
 
 // ... mongoose ...
-const dbLocation = process.env.DATABASELOCATION || "mongodb://localhost/onlineCV";
+const dbLocation = process.env.DATABASELOCATIONCLOUD; //|| "mongodb://localhost/onlineCV";
 mongoose
   .connect(dbLocation, {
     useNewUrlParser: true,
