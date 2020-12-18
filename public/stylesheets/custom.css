@@ -636,18 +636,74 @@ Navbar
     .background_space{
         display: none;
     }
+
+
 }
 
 @media only screen and (max-width: 1200px) {
 
     .timeline_timeblock{
-        grid-template-columns: 2fr 70px 1fr 50% 2fr;
-        grid-template-rows: 30px 30px 10px 30px min-content 200px;
+        grid-template-columns: 2fr 6.8vw 1fr 50% 2fr;
+        grid-template-rows: 30px 3vw 0.8vw 3vw min-content 0px;
     }
 
     .timeline_section .timeline_timeblock .timeblock_textblock{
         grid-column: 4;
         grid-row: 2/ span 5;
+
+        /* grid-template-columns: 15px 1fr 10px;
+        grid-template-rows: 1fr 20px; */
+    }
+
+    .timeline_section .timeline_timeblock .timeblock_textblock h2{
+        /* font-size: 6.2vw;
+        margin-left: 10px;
+        margin-top: 20px; */
+        font-size: 3.8vw;
+    }
+    .timeline_section .timeline_timeblock .timeblock_textblock h3{
+        /* font-size: 3.4vw;
+        margin-left: 10px; */
+        font-size: 2.4vw;
+    }
+    .timeline_section .timeline_timeblock .timeblock_textblock h4{
+        /* font-size: 3.4vw;
+        margin-left: 10px;
+        margin-bottom: 10px; */
+        font-size: 2.4vw;
+        
+    }
+
+    .jaren{
+        font-size: 1.8vw;
+    }
+
+    .workyear{
+        font-size: 1.8vw;
+    }
+
+    .timeline_topspace{
+        min-height: 40px;
+    }
+
+    .timeline_topspace h1{
+        font-size: 10vw;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        margin-left: 8%;
+        margin-bottom: 0px;
+    }
+
+    .title_space_schooling{
+        min-height: 40px;
+    }
+
+    .title_space_schooling h1{
+        font-size: 10vw;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        margin-left: 8%;
+        margin-bottom: 0px;
     }
     
     .timeline_section .timeline_timeblock .timeblock_horizontal_line{
@@ -663,6 +719,7 @@ Navbar
     .timeline_section .timeline_timeblock .timeblock_vertical_line{
         grid-column: 2;
         margin-top: 30px;
+        width: 6px;
     }
     .temp_line_grid_basis{
         display: grid;
@@ -740,6 +797,47 @@ Navbar
 }
 
 @media only screen and (max-width: 700px) {
+
+    .timeline_timeblock{
+        grid-template-columns: 3fr 9.8vw 2fr 65% 3fr;
+        grid-template-rows: 30px 4.1vw 1.6vw 4.1vw min-content 0px;
+    }
+
+    .timeline_section .timeline_timeblock .timeblock_textblock{
+        grid-template-columns: 15px 1fr 10px;
+    }
+
+    .timeline_section .timeline_timeblock h1{
+        font-size: 4.6vw;
+    }
+
+    .timeline_section .timeline_timeblock .timeblock_textblock h2{
+        font-size: 6.2vw;
+        margin-left: 10px;
+        margin-top: 20px;
+    }
+    .timeline_section .timeline_timeblock .timeblock_textblock h3{
+        font-size: 3.4vw;
+        margin-left: 10px;
+    }
+    .timeline_section .timeline_timeblock .timeblock_textblock h4{
+        font-size: 3.4vw;
+        margin-left: 10px;
+        margin-bottom: 10px;
+        
+    }
+
+    .timeline_section .timeline_timeblock .timeblock_textblock li{
+        font-size: 3.4vw;
+    }
+
+    .jaren{
+        font-size: 2.8vw;
+    }
+
+    .workyear{
+        font-size: 2.8vw;
+    }
 
     .profile_section.intro{
         grid-template-columns: 5% 1fr 5%;
