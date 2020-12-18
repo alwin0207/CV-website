@@ -36,7 +36,12 @@ router.get("/test", function (req, res) {
           return console.error(err);
         }
         else{
-          res.render("timeline.ejs", {timeline: {workExp: foundExp, schooling:foundSchooling}});
+          if (req.isAuthenticated()){
+            res.render("timeline.ejs", {timeline: {workExp: foundExp, schooling:foundSchooling, isLoggedin: true}});
+          }
+          else{
+            res.render("timeline.ejs", {timeline: {workExp: foundExp, schooling:foundSchooling, isLoggedin: false}});
+          }
         }
       });
     }

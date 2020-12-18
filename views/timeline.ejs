@@ -18,8 +18,10 @@
         <%- include("partials/timelineblock_schooling", {timeblockInput: timeline.schooling[i]}) %>
     <%}%>
 </div>
-<div>
-    <a href="/addstuff">add</a>
-</div>
+<%if(timeline.isLoggedin){%>
+    <div>
+        <a href="/addstuff">add</a>
+    </div>
+<%}%>
 
 <%- include("partials/footer")%>
