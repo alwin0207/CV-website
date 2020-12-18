@@ -539,7 +539,7 @@ footer{
     border-bottom: 1px solid white;
 }
 
-.contact_content h2{
+.contact_content a{
     display: block;
     font-size: 23px;
     font-weight: normal;
@@ -547,7 +547,7 @@ footer{
     align-self: center;
 }
 
-.contact_content h2::before{
+.contact_content a::before{
     content: "●";
     color: rgb(19, 136, 77);
     font-size: 30px;
@@ -557,15 +557,15 @@ footer{
     padding-left: -1em; 
 }
 
-.contact_content h2:nth-child(2){
+.contact_content a:nth-child(2){
     grid-row: 3;
     grid-column: 2;
 }
-.contact_content h2:nth-child(3){
+.contact_content a:nth-child(3){
     grid-row: 4;
     grid-column: 2;
 }
-.contact_content h2:nth-child(4){
+.contact_content a:nth-child(4){
     grid-row: 5;
     grid-column: 2;
 }
@@ -782,7 +782,7 @@ Navbar
         font-size: 35px;
     }
 
-    .contact_content h2{
+    .contact_content a{
         font-size: 20px;
     }
 
@@ -975,7 +975,7 @@ Navbar
         font-size: 35px;
     }
 
-    .contact_content h2{
+    .contact_content a{
         font-size: 20px;
     }
 
