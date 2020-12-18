@@ -632,7 +632,112 @@ Navbar
     border-radius: 20px;
     font-size: 2.5vw;
 }
+@media only screen and (max-width: 1400px) {
+    .background_space{
+        display: none;
+    }
+}
 
+@media only screen and (max-width: 1200px) {
+
+    .timeline_timeblock{
+        grid-template-columns: 2fr 70px 1fr 50% 2fr;
+        grid-template-rows: 30px 30px 10px 30px min-content 200px;
+    }
+
+    .timeline_section .timeline_timeblock .timeblock_textblock{
+        grid-column: 4;
+        grid-row: 2/ span 5;
+    }
+    
+    .timeline_section .timeline_timeblock .timeblock_horizontal_line{
+        grid-column: 3;
+        grid-row: 3;
+    }
+    
+    .timeblock_timepoint{
+        grid-column: 2;
+        grid-row: 2/ span 3;
+    }
+
+    .timeline_section .timeline_timeblock .timeblock_vertical_line{
+        grid-column: 2;
+        margin-top: 30px;
+    }
+    .temp_line_grid_basis{
+        display: grid;
+        grid-template-columns: 1fr 70px 1fr;
+        grid-template-rows: 20px;
+        grid-auto-rows: min-content;
+    }
+
+
+    .explanation .quotespace{
+        grid-template-columns: 0px 1fr 20px 0fr 1px 0fr fit-content(80%) 0fr 1px 0fr 20px 0fr 0px 1fr;
+        grid-template-rows: 10px 1fr 20px 0fr 1px 0fr min-content 0fr 1px 0fr 20px 0fr 30px 0fr 20px 0fr 10px 1fr;
+    }
+    
+    footer{
+        grid-template-columns: 5% min-content 1fr;
+        grid-template-rows: auto;
+        row-gap: 50px;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    .footer_namecard{
+        grid-column: 2;
+        grid-row: 1;
+        
+    }
+
+    .footer_links{
+        grid-column: 2;
+        grid-row: 2;
+    }
+
+    .footer_contact{
+        grid-column: 2;
+        grid-row: 3;
+    }
+
+    .namecard_content{
+        grid-template-columns: 10px 30px 10px 30px 10px 30px max-content 0px ;
+        border: none;
+    }
+
+    .links_content{
+        grid-template-columns: 10px max-content;
+    }
+
+    .contact_content{
+        grid-template-columns: 10px max-content;
+    }
+
+    .namecard_content h1{
+        font-size: 40px;
+    }
+    .namecard_content h2{
+        font-size: 30px;
+    }
+
+    .contact_content h1{
+        font-size: 35px;
+    }
+
+    .contact_content h2{
+        font-size: 20px;
+    }
+
+    .links_content h1{
+        font-size: 35px;
+    }
+
+    .links_content a{
+        font-size: 20px;
+    }
+
+}
 
 @media only screen and (max-width: 700px) {
 
@@ -707,7 +812,7 @@ Navbar
 
     .quotespace .quote_text{
         font-size: 9vw;
-        line-height: 2rem;
+        line-height: 1em;
     }
 
     .quotespace .quote_author{
@@ -779,7 +884,7 @@ Navbar
     }
 
     .myNav{
-     height: 50px;   
+     height: 40px;   
     }
 
     .myLogo{
@@ -792,12 +897,13 @@ Navbar
     }
 
     .navContent li{
-        font-size: 10px;
+        font-size: 12px;
     }
 
     .contact_button{
-        margin-right: 20px;
-        font-size: 10px;
+        margin-right: 10px;
+        font-size: 12px;
+        padding: 5px 10px;
     }
 }
 
