@@ -112,7 +112,7 @@ Design Filosofie
 .quotespace{
     display: grid;
     grid-template-columns: 50px 1fr 20px 0fr 1px 0fr fit-content(80%) 0fr 1px 0fr 20px 0fr 50px 1fr;
-    grid-template-rows: 30px 1fr 20px 0fr 1px 0fr min-content 0fr 1px 0fr 20px 0fr 80px 0fr 20px 0fr 50px 1fr;
+    grid-template-rows: 30px 1fr 20px 0fr 1px 0fr max-content 0fr 1px 0fr 20px 0fr 80px 0fr 20px 0fr 50px 1fr;
     align-items: stretch;
     justify-items: stretch;
     font-size: 2.6vw;
@@ -378,7 +378,7 @@ timeblock (1 item on the timeline)
 }
 
 /*//////////////////////////////////////////////////////////////////////////////////
-Timeline page
+Footer
 //////////////////////////////////////////////////////////////////////////////////*/
 
 footer{
@@ -388,6 +388,7 @@ footer{
     background-color: #292828;
     color: #eeeeee;
     font-family: 'Fahkwang', sans-serif;
+    max-width: 100vw;
 }
 
 .background_space{
@@ -630,6 +631,172 @@ Navbar
     border: none;
     border-radius: 20px;
     font-size: 2.5vw;
+}
+
+
+@media only screen and (max-width: 700px) {
+
+    .profile_section.intro{
+        grid-template-columns: 5% 1fr 5%;
+        grid-template-rows: auto;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        row-gap: 50px;
+    }
+    
+    .profile_section.explanation{
+        grid-template-columns: 5% 1fr 5%;
+        grid-template-rows: auto;
+        row-gap: 50px;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    
+    .intro .textspace{
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    .textspace h1{
+        font-size: 11vw;
+    }
+
+    .textspace p{
+        font-size: 5vw;
+    }
+
+    .mybreak{
+        display: none;
+    }
+    
+    .intro .profile_picture_space{
+        /* display: flex;
+        justify-content: space-around; */
+        background-color: transparent;
+        grid-column: 2;
+        grid-row: 2;
+    }
+
+    .profile_picture_space img{
+        height: 100%;
+        width: 60%;
+    }
+    
+    .intro .social_media_links{
+        grid-column: 2;
+        grid-row: 3;
+    }
+
+    .intro .social_media_links a{
+        width: 20px;
+        height: 20px;
+    }
+
+    .explanation .textspace{
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    .explanation .quotespace{
+        grid-column: 2;
+        grid-row: 2;
+
+        grid-template-columns: 10px 1fr 20px 0fr 1px 0fr fit-content(80%) 0fr 1px 0fr 20px 0fr 10px 1fr;
+        grid-template-rows: 10px 1fr 20px 0fr 1px 0fr min-content 0fr 1px 0fr 20px 0fr 30px 0fr 20px 0fr 10px 1fr;
+    }
+
+    .quotespace .quote_text{
+        font-size: 9vw;
+        line-height: 1.5rem;
+    }
+
+    .quotespace .quote_author{
+        font-size: 9vw;
+    }
+
+    .quotespace .quote_open, .quotespace .quote_close{
+        font-size: 13vw;
+    }
+
+    footer{
+        grid-template-columns: 5% min-content 1fr;
+        grid-template-rows: auto;
+        row-gap: 50px;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    .footer_namecard{
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    .footer_links{
+        grid-column: 2;
+        grid-row: 2;
+    }
+
+    .footer_contact{
+        grid-column: 2;
+        grid-row: 3;
+    }
+
+    .namecard_content{
+        grid-template-columns: 10px 30px 10px 30px 10px 30px max-content 0px ;
+    }
+
+    .links_content{
+        grid-template-columns: 10px max-content;
+    }
+
+    .contact_content{
+        grid-template-columns: 10px max-content;
+    }
+
+    .namecard_content h1{
+        font-size: 40px;
+    }
+    .namecard_content h2{
+        font-size: 30px;
+    }
+
+    .contact_content h1{
+        font-size: 35px;
+    }
+
+    .contact_content h2{
+        font-size: 20px;
+    }
+
+    .links_content h1{
+        font-size: 35px;
+    }
+
+    .links_content a{
+        font-size: 20px;
+    }
+
+    .myNav{
+     height: 50px;   
+    }
+
+    .myLogo{
+        margin-left: 10px;
+        width: 30px;
+    }
+    .navContent{
+        margin-left: 0px;
+        padding-inline-start: 10px;
+    }
+
+    .navContent li{
+        font-size: 10px;
+    }
+
+    .contact_button{
+        margin-right: 20px;
+        font-size: 10px;
+    }
 }
 
 /*//////////////////////////////////////////////////////////////////////////////////
