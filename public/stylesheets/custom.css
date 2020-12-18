@@ -707,7 +707,7 @@ Navbar
 
     .quotespace .quote_text{
         font-size: 9vw;
-        line-height: 1.5rem;
+        line-height: 2rem;
     }
 
     .quotespace .quote_author{
@@ -729,6 +729,7 @@ Navbar
     .footer_namecard{
         grid-column: 2;
         grid-row: 1;
+        
     }
 
     .footer_links{
@@ -743,6 +744,7 @@ Navbar
 
     .namecard_content{
         grid-template-columns: 10px 30px 10px 30px 10px 30px max-content 0px ;
+        border: none;
     }
 
     .links_content{
